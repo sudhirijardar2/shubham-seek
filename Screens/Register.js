@@ -28,9 +28,9 @@
    LearnMoreLinks,
    ReloadInstructions,
  } from 'react-native/Libraries/NewAppScreen';
- 
+ import Drop from 'react-native-vector-icons/AntDesign';
  const Register = ({ navigation }) => {
-   const des = "An OTP will be sent on given number for varification \n Standard message and data rates apply"
+   const des = "An OTP will be sent on given number for verification. \n"
    return ( <>
    <ScrollView>
      <View
@@ -49,17 +49,18 @@
        <View style={{marginHorizontal:20}} >
          <View style={{flexDirection:'row',marginTop:60,justifyContent:'space-between', justifyContent: "center",
          alignItems: "center",top:125,borderColor:'#79747E',borderWidth:1,borderRadius:12,padding:5}}>
-         <Image style={{marginLeft:280}}
+         <Image style={{marginLeft:355,bottom:-1.0,left:7}}
            
            source={require('../assets/🇮🇳.png')}
          />
-         <Text style={{fontSize:16,fontWeight:"400",marginLeft:5}}>+91</Text>
+         <Text style={{fontSize:16,fontWeight:"400",marginLeft:12}}>+91</Text>
+         <Drop name="caretdown" size={13} color="#757575" style={{left:3,bottom:0.3}} />         
          {/* <Text style={{fontSize:30}}>|</Text> */}
 
          <View style={{borderLeftWidth:1,borderColor:'#79747E',marginLeft:10,height:'120%'}}>
 
          </View>
-         <View style={{marginRight:450,marginLeft:5,width:'30%'}}>
+         <View style={{marginRight:450,marginLeft:15,width:'40%'}}>
          <TextInput placeholder='Mobile Number' keyboardType='number-pad'></TextInput>
          </View>
          
@@ -67,12 +68,13 @@
          </View>
        <View style={{marginTop:20,justifyContent:'space-between', 
          top:125,borderColor:'#79747E',borderWidth:1,borderRadius:12,padding:5}}>
-         <TextInput style={{marginLeft:10}} placeholder='Referal code (Optional)' keyboardType='number-pad'></TextInput>
+         <TextInput style={{marginLeft:10}} placeholder='Referral code (Optional)' keyboardType='number-pad'></TextInput>
        </View>
 
        <View style={{marginTop:20, 
-         top:125}} >
-         <Text style={{fontSize:14,color:'#757575',lineHeight:18}}>{des}</Text>
+         top:120}} >
+         <Text style={{fontSize:13,color:'#757575',lineHeight:18}}>{des}</Text>
+         <Text style={{bottom:10}}>Standard message and data rates apply</Text>
        </View>
 
        <TouchableOpacity onPress={()=>navigation.navigate("Otp")}

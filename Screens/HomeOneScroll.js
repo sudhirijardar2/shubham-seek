@@ -169,7 +169,7 @@
        <ScrollView style={{top:-15,}}>
            <View style={{top:-5}}>
              <TouchableOpacity onPress={()=>navigation.navigate("Salonforwomen")}>
-             <Text style={{ fontSize: 20, fontStyle: 'normal', fontWeight: '700', color: 'black' }}>Tranding services</Text>
+             <Text style={{ fontSize: 20, fontStyle: 'normal', fontWeight: '700', color: 'black' }}>Trending services</Text>
              </TouchableOpacity>
  
            <FlatList

@@ -164,7 +164,8 @@ const Home = ({ navigation }) => {
                 <Location name='ios-location' size={20} color={'black'} style={{ left: 60, top: 8 }} />
                 <Text style={{ fontSize: 12, fontStyle: 'normal', fontWeight: '400', lineHeight: 22, left: 80, bottom: 12, color: '#161616' }}>Ayodhya Nagar,Bhopal</Text>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate("HomeOneScroll")}>
+            <TouchableOpacity >
+                {/* onPress={() => navigation.navigate("HomeOneScroll")} */}
                 <View style={{ borderRadius: 15, left: 280, width: '15%', alignItems: 'center', backgroundColor: '#F3F3F3', bottom: 52 }}>
                     <Noti name='notifications' color={'#5E17EB'} size={30} style={{ marginTop: 5 }} />
                     <Image
