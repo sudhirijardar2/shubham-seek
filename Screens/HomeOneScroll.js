@@ -19,6 +19,7 @@
    TextInput,
    TouchableOpacity,
    FlatList,
+   Dimensions
  
  } from 'react-native';
  import AppIntroSlider from 'react-native-app-intro-slider';
@@ -70,22 +71,22 @@
    const Freelancers = [
      {
        id: 1,
-       title: 'Jack Harlow\nElectrician\n4.5',
-       image: require('../assets/man.png')
+       title: 'Jack Harlow\n    Electrician\n   4.5',
+       image: require('../assets/jack.png')
      },
      {
        id: 2,
-       title: 'Nina Chen\nCleaner\n4.8',
+       title: 'Nina Chen\n   Cleaner\n    4.8',
        image: require('../assets/free.png')
      },
      {
        id: 3,
-       title: 'Jack Harlow\nElectrician\n4.5',
-       image: require('../assets/man.png')
+       title: 'Jack Harlow\n     Electrician\n   4.5',
+       image: require('../assets/jack.png')
      },
      {
        id: 4,
-       title: 'Nina Chen\nCleaner\n4.8',
+       title: 'Nina Chen\n    Cleaner\n    4.8',
        image: require('../assets/free.png')
      },
    ]
@@ -129,33 +130,47 @@
          </View>
  
          <FlatList
-           style={{ height: 270 }}
+           style={{ height: 280,}}
            data={Freelancers}
            horizontal={true}
            renderItem={({ item }) => {
              return (
-               <View style={{ alignContent: 'center', alignItems: 'center', padding: 10, margin: 15}}>
+             
+               <View style={{ alignContent: 'center', alignItems: 'center', padding: 15, margin: 15,bottom:20,}}>
+                 <View style={{zIndex: 1,top:10,shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 5,
+},
+shadowOpacity: 0.34,
+shadowRadius: 6.27,
+elevation: 10,}}>
                  <Image
-                   style={{ padding: 50, borderRadius: 50, width: 60, aspectRatio: 2 / 4 }}
+                   style={{ padding: 35, borderRadius: 50, width: 65, aspectRatio: 2 / 4,top:20,
+                   
+                 }}
                    source={item.image}
                  />
-                 <View style={{ borderRadius: 12, position: 'absolute', top: 80, width: '140%', height: '50%', justifyContent: 'center', backgroundColor: '#F3F3F3' }}>
-                   <Text style={{ fontSize: 14, textAlign: 'center', color: 'black', }}>{item.title}</Text>
-                   <View style={{ position: 'absolute', top: 40, left: 110 }}>
-                     <Verified name='verified' size={20} color={'blue'} />
+                 </View>
+                
+                 <View style={{borderRadius: 12, position: 'absolute', top: 80, width: '170%', height: '75%', justifyContent: 'center', backgroundColor: '#E0DEDE' }}>
+                   
+                   <Text style={{ fontSize: 14, textAlign: 'center', color: 'black',right:8,top:15,lineHeight:27 }}>{item.title}</Text>
+                   <View style={{ position: 'absolute', top: 40, left: 95 }}>
+                     <Verified name='verified' size={20} color={'#2B95E9'} />
                    </View>
-                   <Star name='star' color={'#F5C443'} style={{ top: -14, left: 40 }} />
+                   <Star name='star' color={'#F5C443'} style={{left: 32,bottom:5 }} />
                    <TouchableOpacity>
-                   <View style={{ borderRadius: 20, marginHorizontal: 10, backgroundColor: '#5E17EB', padding: 5 }}>
+                   <View style={{ borderRadius: 20, marginHorizontal: 10, backgroundColor: '#5E17EB', padding: 5,top:15 }}>
                      <Text style={{ textAlign: 'center', fontSize: 14, color: 'white' }}>view profile</Text>
                  
                    </View>
                    </TouchableOpacity>
                  </View>
  
+              
  
- 
-               </View>
+              </View>
              )
  
            }}
@@ -164,10 +179,11 @@
  
          />
        </View>
+     
  
  
-       <ScrollView style={{top:-15,}}>
-           <View style={{top:-5}}>
+       
+           <View>
              <TouchableOpacity onPress={()=>navigation.navigate("Salonforwomen")}>
              <Text style={{ fontSize: 20, fontStyle: 'normal', fontWeight: '700', color: 'black' }}>Trending services</Text>
              </TouchableOpacity>
@@ -198,9 +214,12 @@
  
  
            />
+           <View>
+
+           </View>
            </View>
        
-       </ScrollView>
+     
  
  
  

@@ -36,6 +36,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import axios from 'react-native-axios'
 // import { useEffect } from 'react/cjs/react.production.min';
 import HomeOneScroll from './HomeOneScroll';
+import Sumary from '../Sumrryslot/Sumary';
 
 
 
@@ -184,8 +185,8 @@ const Home = ({ navigation }) => {
                 <View style={{ borderRadius: 20, alignContent: 'flex-end', alignItems: 'flex-end', padding: 10 }}>
 
                     <Image
-                        style={{ top: 5 }}
-                        source={require('../assets/banner.png')}
+                        style={{ top: 10,left:10 ,borderBottomRightRadius:10 }}
+                        source={require('../assets/jhaduwali.png')}
                     />
 
                 </View>
@@ -249,7 +250,7 @@ const Home = ({ navigation }) => {
                     </View>
             </View>
 
-<View style={{top:25}}>
+<View style={{top:25,}}>
     <HomeOneScroll />
 </View>
 

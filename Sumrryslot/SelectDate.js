@@ -20,7 +20,7 @@ import SelectTime from './SelectTime';
 const SelectDate = ({ visible, closeCallback, shareOptionCallback , navigation }) => {
  const msg = 'Free cancellation till 2hr before the booked\nslot,post that ₹50 chargeable'
   const booking = 'Booking Delayed\nby 20 mins'
-  const [Popup, setPopup] = useState(false);
+  const [Popup, setPopup] = useState(true);
 
     return (
         <Modal

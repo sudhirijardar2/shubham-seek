@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 
+
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 
@@ -229,6 +230,7 @@ android {
             keyPassword 'android'
         }
     }
+    buildToolsVersion buildToolsVersion
     buildTypes {
         debug {
             signingConfig signingConfigs.debug

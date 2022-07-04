@@ -62,14 +62,14 @@
  
        image: require('../assets/sthree.png')
      },
-     {
-       id: 4,
-       title: 'Threading',
-       onemore: '₹59 onwords',
+    //  {
+    //    id: 4,
+    //    title: 'Threading',
+    //    onemore: '₹59 onwords',
  
-       // title1:'ajdlfjdjfj',
-       image: require('../assets/sfour.png')
-     },
+    //    // title1:'ajdlfjdjfj',
+    //    image: require('../assets/sfour.png')
+    //  },
  
    ]
  

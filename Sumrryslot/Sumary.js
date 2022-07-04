@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 
 import React,{useState} from 'react';
 import {
@@ -37,6 +30,7 @@ import Header from  '../Screens/Components/Header'
 import Head from '../Screens/Components/Head';
 import Summarylist from '../Screens/Components/Summarylist';
 import SelectDate from './SelectDate';
+import Map from '../Screens/Map';
 
 
 
@@ -45,7 +39,7 @@ const Sumary = ( { navigation }) => {
 
    
 
-  const [Popup, setPopup] = useState(false);
+//   const [Popup, setPopup] = useState(false);
     
     return (<>
     <View style={{marginHorizontal:10,backgroundColor:'white'}}>
@@ -53,11 +47,11 @@ const Sumary = ( { navigation }) => {
       
        <Head title="Summary" />
 
-    
+      
     <CardRelated />
     <Summarylist />
 <View style={{marginTop:260,padding:10,borderRadius:12,elevation:10,backgroundColor:'white'}}>
-    <TouchableOpacity onPress={()=>setPopup(true)}>
+    <TouchableOpacity  onPress={()=>navigation.navigate(Map)}>
     <Text style={{fontSize:16,color:'#161616'}}>Payment Sumary</Text>
     </TouchableOpacity>
   <View style={{borderWidth:1,borderColor:'#161616',width:125}}></View>
@@ -85,8 +79,8 @@ const Sumary = ( { navigation }) => {
   <View style={{borderRadius:6,backgroundColor:'rgba(82, 180, 107, 0.2)',padding:5,marginTop:20}}>
       <Text style={{textAlign:'center',color:'#52B46B',fontSize:12}}>Hurray ! you have saved ₹50 on final bill</Text>
   </View>
-  <SelectDate visible={Popup} closeCallback={()=>setPopup(false)} navigation={navigation}/>
-
+{/*   
+  <SelectDate visible={Popup} closeCallback={()=>setPopup(false)} navigation={navigation} />    */}
   </View>
   </ScrollView>
   </View>   

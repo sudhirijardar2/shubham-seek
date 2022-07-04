@@ -58,7 +58,7 @@ export default function App({ navigation }) {
 
 
       <View style={{ marginTop: 180 }}>
-        <Text style={{ fontSize: 12, fontFamily: 'Poppins-Regular',textAlign:'center',fontWeight:'400' }}>we have sent you a Verification code on </Text>
+        <Text style={{ fontSize: 12, fontFamily: 'Poppins-Regular',textAlign:'center',fontWeight:'400' }}>we have sent you a 4 digit Verification code on </Text>
         <Text style={{ fontSize: 14, fontFamily: 'Poppins-Regular', marginTop: 5,textAlign:'center',fontWeight:'500' }}>+91 6390168836</Text>
 
 
