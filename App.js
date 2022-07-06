@@ -25,6 +25,7 @@ import SelectedServices from './Screens/SelectedServices'
 import Map from  './Screens/Map'
 import Diamond from './Screens/Diamond';
 import SelectTimeOne from './Sumrryslot/SelectTimeOne';
+import ChangeLocation from './Screens/ChangeLocation';
 
 
 
@@ -80,6 +81,7 @@ function App() {
       <Stack.Screen options={{ headerShown: false }} name="SelectedServices" component={SelectedServices} />
       <Stack.Screen options={{ headerShown: false }} name="Map" component={Map} />
       <Stack.Screen options={{ headerShown: false }} name="SelectTimeOne" component={SelectTimeOne} />
+      {/* <Stack.Screen options={{ headerShown: false }} name="ChangeLocation" component={ChangeLocation} /> */}
 
 
 

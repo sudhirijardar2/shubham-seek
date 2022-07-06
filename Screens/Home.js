@@ -38,6 +38,7 @@ import axios from 'react-native-axios'
 import HomeOneScroll from './HomeOneScroll';
 import Sumary from '../Sumrryslot/Sumary';
 import Map from './Map';
+// import ChangeLocation from './ChangeLocation';
 
 
 
@@ -146,7 +147,7 @@ const Home = ({ navigation }) => {
     //     },
      
     //   ];
-
+    const [Popup, setPopup] = useState(true);
     const des = "An OTP will be sent on given number for varification \n Standard message and data rates apply"
     return (<>
         <ScrollView>
@@ -213,7 +214,7 @@ const Home = ({ navigation }) => {
                     <Text style={{ fontSize: 20, fontWeight: '700', color: '#161616', bottom:25 }}>Categories</Text>
                 </TouchableOpacity>
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-                <TouchableOpacity onPress={()=>navigation.navigate(Map)}>
+                <TouchableOpacity onPress={()=>navigation.navigate('Map')} >
                <View style={{backgroundColor: '#ffffff', borderRadius: 20,width:102,height:135,}}>
                 <Image source={require('../assets/swoman.png')} style={{borderRadius:20,left:14,top:10}} />
                    <Text style={{fontSize:14,top:18,left:19,color:'black'}}>Salon for</Text>
@@ -262,13 +263,16 @@ const Home = ({ navigation }) => {
                 </TouchableOpacity>
                 </View>
             </View>
-
+           
 <View style={{top:15}}>
     <HomeOneScroll />
+     
 </View>
 
-            
+{/* <SelectDate visible={Popup} closeCallback={()=>setPopup(false)} navigation={navigation} />   */}
         </View>
+        
+
         </ScrollView>
     </>
     )

@@ -68,8 +68,8 @@ import Salonforwomen from './Salonforwomen';
    </View>
    <View>
    <Text style={{fontSize:14,color:'rgba(117, 117, 117, 1)',left:40,marginTop:10}}>Ayodhya Bypass</Text>
-   {/* onPress={()=>setPopup(true)} */}
-   <TouchableOpacity  onPress={() => navigation.navigate("Salonforwomen")}
+   {/*  */}
+   <TouchableOpacity  onPress={()=>setPopup(true)}
         style={{ alignItems: 'center',  borderRadius: 20,  padding: 20, backgroundColor: '#3672E9', borderColor: '#5E17EB', width: '100%',marginTop:32}}>
                 <Text style={{ color: '#ffffff', fontSize: 16, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Confirm Location</Text>
             </TouchableOpacity>
