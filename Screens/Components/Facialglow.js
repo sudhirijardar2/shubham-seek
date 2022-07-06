@@ -90,15 +90,19 @@ import Diamond from '../Diamond';
      return (
        <View style={{ alignContent: 'center', alignItems: 'center'}}>
          <View style={{ borderRadius: 12, padding: 20, margin: -10, backgroundColor: '#FFFFFF',height:300 }}>
+           <TouchableOpacity  onPress={()=>setPopup(true)}>
+           <View>
            <Image
              style={{ borderRadius: 12, borderWidth: 0.5 }}
              source={item.image}
            />
-
+          </View>
+          </TouchableOpacity>
 
            <Text style={{ fontSize: 16, textAlign: 'center', color: '#161616', fontWeight: '500',top:10 }}>{item.title}</Text>
            <Text style={{ fontSize: 14, textAlign: 'center', color: '#5E17EB', fontWeight: '400',top:10 }}>{item.onemore}</Text>
-           <TouchableOpacity onPress={()=>setPopup(true)}>
+           <TouchableOpacity >
+           {/* onPress={()=>setPopup(true)} */}
            <View style={{borderRadius:12,width:40,height:40,alignContent:'center',justifyContent:'center',backgroundColor:'#5E17EB',left:100,top:30}}>
              <Plus name='plus' size={20} color={'white'} style={{textAlign:'center'}} />
              </View>

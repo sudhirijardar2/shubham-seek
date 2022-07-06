@@ -13,6 +13,8 @@ import {
 import Modal from 'react-native-modal';
 import Plus from 'react-native-vector-icons/AntDesign';
 import Star from 'react-native-vector-icons/AntDesign';
+import SelectedServices from './SelectedServices';
+import { Component } from 'react';
 
 
 
@@ -63,15 +65,17 @@ const Diamond = ({ visible, closeCallback, shareOptionCallback , navigation }) =
                                     source={require('../assets/fgone.png')}
                                 />
                             </View>
-                           
+                          
                            <View style={{marginHorizontal:20}}>
                              <Text style={{fontSize:16,color:'#161616',fontWeight:'700',top:25}}>Diamond Facial</Text>
-                             <TouchableOpacity onPress={()=>navigation.navigate("SelectedServices")} >
-                             <View style={{borderRadius:8,alignItems:'center',marginHorizontal:160,left:120,backgroundColor:'#FFFFFF'}}>
+                             </View>
+                            
+      {/* <TouchableOpacity onPress={()=>navigation.navigate('SelectedServices')}> */}
+                             <View style={{borderRadius:8,alignItems:'center',marginHorizontal:160,left:100,width:75,backgroundColor:'#E5E5E5'}}>
 <Plus name='plus' color={'#5E17EB'} style={{top:10,right:15}} />
-<Text style={{fontSize:14,color:'#5E17EB',fontWeight:'500',left:5,top:-5}}>Add</Text>
+<Text style={{fontSize:14,color:'#5E17EB',fontWeight:'500',left:5,top:-6,}}>Add</Text>
 </View>
-</TouchableOpacity>
+{/* </TouchableOpacity> */}
 <View style={{marginTop:5}}>
 <Star name='star' color={'#F5C443'} />
 <Text style={{left:20,top:-15,fontSize:12,color:'#161616',fontWeight:'500'}}>4.8 (23k)</Text>
@@ -116,7 +120,7 @@ const Diamond = ({ visible, closeCallback, shareOptionCallback , navigation }) =
                           
 
                         </View>
-                    </View>
+                    
                 </ScrollView>
             </KeyboardAvoidingView>
         </Modal>

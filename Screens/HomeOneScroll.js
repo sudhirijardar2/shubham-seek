@@ -121,7 +121,7 @@
  
        </View> */}
        <View >
-         <View style={{ marginTop: 20, flexDirection: 'row' }}>
+         <View style={{ marginTop: 40, flexDirection: 'row' }}>
            <Text style={{ fontSize: 20, fontStyle: 'normal', fontWeight: '700', color: 'black' }}>Top Freelancers</Text>
            <Text style={{ fontSize: 12, color: '#757575', marginLeft: 130 }}>explore</Text>
            <Right name='right' color={'#757575'} style={{ marginTop: 3 }} />
@@ -130,21 +130,14 @@
          </View>
  
          <FlatList
-           style={{ height: 280,}}
+           style={{ height: 280,bottom:15}}
            data={Freelancers}
            horizontal={true}
            renderItem={({ item }) => {
              return (
              
                <View style={{ alignContent: 'center', alignItems: 'center', padding: 15, margin: 15,bottom:20,}}>
-                 <View style={{zIndex: 1,top:10,shadowColor: "#000",
-shadowOffset: {
-	width: 0,
-	height: 5,
-},
-shadowOpacity: 0.34,
-shadowRadius: 6.27,
-elevation: 10,}}>
+                 <View style={{zIndex: 1,top:10,}}>
                  <Image
                    style={{ padding: 35, borderRadius: 50, width: 65, aspectRatio: 2 / 4,top:20,
                    
@@ -183,9 +176,10 @@ elevation: 10,}}>
  
  
        
-           <View>
-             <TouchableOpacity onPress={()=>navigation.navigate("Salonforwomen")}>
-             <Text style={{ fontSize: 20, fontStyle: 'normal', fontWeight: '700', color: 'black' }}>Trending services</Text>
+           <View style={{bottom:5}}>
+             <TouchableOpacity >
+             {/* onPress={()=>navigation.navigate("Salonforwomen")} */}
+             <Text style={{ fontSize: 20, fontStyle: 'normal', fontWeight: '700', color: 'black',bottom:10 }}>Trending services</Text>
              </TouchableOpacity>
  
            <FlatList
@@ -195,7 +189,7 @@ elevation: 10,}}>
              slider={true}
              renderItem={({ item }) => {
                return (
-                 <View style={{ alignContent: 'center', alignItems: 'center', }}>
+                 <View style={{ alignContent: 'center', alignItems: 'center',top:10 }}>
                    <Image
                      style={{ padding: 40, margin: 10, borderRadius: 12 }}
                      source={item.image}

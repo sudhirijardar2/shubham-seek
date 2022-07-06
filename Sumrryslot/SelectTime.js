@@ -72,16 +72,23 @@ const SelectTime = ({ visible, closeCallback, shareOptionCallback, navigation })
                                     <News name='newspaper-o' size={15} style={{ right: 10, top: 10 }} />
                                     <Text>{msg}</Text>
                                 </View>
+                                
                                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
+                                <TouchableOpacity>
                                     <View style={{ borderColor: 'rgba(227, 227, 227, 1)', borderWidth: 1, borderRadius: 12, padding: 15 }}>
                                         <Text>06:30 PM</Text>
                                     </View>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
                                     <View style={{ borderColor: 'rgba(94, 23, 235, 1)', borderWidth: 1, borderRadius: 12, padding: 15, marginLeft: 20 }}>
                                         <Text>07:30 PM</Text>
                                     </View>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
                                     <View style={{ borderColor: 'rgba(227, 227, 227, 1)', borderWidth: 1, borderRadius: 12, padding: 15, marginLeft: 20 }}>
                                         <Text>07:30 PM</Text>
                                     </View>
+                                    </TouchableOpacity>
 
                                 </View>
 

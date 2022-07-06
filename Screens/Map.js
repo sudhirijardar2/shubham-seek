@@ -33,6 +33,8 @@
  import MapView from 'react-native-maps';
 import Location from 'react-native-vector-icons/Ionicons';
 import SelectDate from '../Sumrryslot/SelectDate';
+import Home from './Home';
+import Salonforwomen from './Salonforwomen';
  
  const Map = ({ navigation }) => {
    const des = "An OTP will be sent on given number for varification \n Standard message and data rates apply"
@@ -66,7 +68,8 @@ import SelectDate from '../Sumrryslot/SelectDate';
    </View>
    <View>
    <Text style={{fontSize:14,color:'rgba(117, 117, 117, 1)',left:40,marginTop:10}}>Ayodhya Bypass</Text>
-   <TouchableOpacity   onPress={()=>setPopup(true)}
+   {/* onPress={()=>setPopup(true)} */}
+   <TouchableOpacity  onPress={() => navigation.navigate("Salonforwomen")}
         style={{ alignItems: 'center',  borderRadius: 20,  padding: 20, backgroundColor: '#3672E9', borderColor: '#5E17EB', width: '100%',marginTop:32}}>
                 <Text style={{ color: '#ffffff', fontSize: 16, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Confirm Location</Text>
             </TouchableOpacity>

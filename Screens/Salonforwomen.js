@@ -90,15 +90,20 @@
            renderItem={({ item }) => {
              return (
                <View style={{ alignContent: 'center', alignItems: 'center' }}>
+               
                  <View style={{ borderRadius: 12, padding: 20, margin: -10, backgroundColor: '#FFFFFF' }}>
+                 <TouchableOpacity onPress={()=>navigation.navigate("Facialforglow")}>
+                   <View>
                    <Image
                      style={{ borderRadius: 12, borderWidth: 0.5 }}
                      source={item.image}
                    />
+                   </View>
+                    </TouchableOpacity>
  
-                <TouchableOpacity onPress={()=>navigation.navigate("Facialforglow")}>
+                
                    <Text style={{ fontSize: 16, textAlign: 'center', color: '#161616', fontWeight: '500' }}>{item.title}</Text>
-                   </TouchableOpacity>
+                  
                    <Text style={{ fontSize: 14, textAlign: 'center', color: '#5E17EB', fontWeight: '400' }}>{item.onemore}</Text>
  
                  </View>

@@ -52,20 +52,24 @@ const SelectDate = ({ visible, closeCallback, shareOptionCallback , navigation }
                                <Text style={{fontSize:16,color:'black',fontWeight:'500',marginTop:60}}>Select date and time</Text>
                                <Text style={{color:'rgba(117, 117, 117, 1)',lineHeight:21}}>Your service will take approx.45 mins</Text> 
                                 <View style={{flexDirection:'row',marginTop:50}}>
+                                   <TouchableOpacity> 
                                 <View style={{borderRadius:12,borderColor:'rgba(94, 23, 235, 1)',borderWidth:1,padding:15,backgroundColor:'rgba(242, 236, 253, 1)'}}>
                                <Text style={{textAlign:'center'}}>Sat</Text>
                                <Text style={{color:'black',fontWeight:'700',textAlign:'center'}}>10</Text>
                                </View>
-
+                               </TouchableOpacity>
+                                <TouchableOpacity>
                                <View style={{borderRadius:12,borderColor:'rgba(227, 227, 227, 1)',borderWidth:1,padding:15,marginLeft:20}}>
                                <Text style={{textAlign:'center'}} >Sun</Text>
                                <Text style={{color:'black',fontWeight:'700',textAlign:'center'}}>11</Text>
                                </View>
-
+                               </TouchableOpacity>
+                                <TouchableOpacity>
                                <View style={{borderRadius:12,borderColor:'rgba(227, 227, 227, 1)',borderWidth:1,padding:15,marginLeft:20}}>
                                <Text style={{textAlign:'center'}}>Mon</Text>
                                <Text style={{color:'black',fontWeight:'700',textAlign:'center'}}>12</Text>
                                </View>
+                               </TouchableOpacity>
                                </View>
 
                               
@@ -90,7 +94,7 @@ const SelectDate = ({ visible, closeCallback, shareOptionCallback , navigation }
 
 
                                 <TouchableOpacity onPress={()=>setPopup(true)} >
-        <View style={{borderRadius:10,padding:15,alignItems:'center',backgroundColor:'rgba(216, 216, 216, 1)',marginTop:120}}>
+        <View style={{borderRadius:10,padding:15,alignItems:'center',backgroundColor:'rgba(216, 216, 216, 1)',marginTop:185}}>
     <Text style={{color:'white',fontWeight:'700'}}>Proceed to checkout</Text>
 </View>
 </TouchableOpacity>

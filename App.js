@@ -23,7 +23,8 @@ import Tabs from './Screens/Components/Tabs'
 import Register from './Screens/Register';
 import SelectedServices from './Screens/SelectedServices'
 import Map from  './Screens/Map'
-
+import Diamond from './Screens/Diamond';
+import SelectTimeOne from './Sumrryslot/SelectTimeOne';
 
 
 
@@ -74,11 +75,11 @@ function App() {
       <Stack.Screen options={{ headerShown: false }} name="HomeOneScroll" component={HomeOneScroll} />
       <Stack.Screen options={{ headerShown: false }} name="Salonforwomen" component={Salonforwomen} />
       <Stack.Screen options={{ headerShown: false }} name="Facialforglow" component={Facialforglow} />
-      {/* <Stack.Screen options={{ headerShown: false }} name="Diamond" component={Diamond} /> */}
+      <Stack.Screen options={{ headerShown: false }} name="Diamond" component={Diamond} />
       <Stack.Screen options={{ headerShown: false }} name="Sumary" component={Sumary} />
       <Stack.Screen options={{ headerShown: false }} name="SelectedServices" component={SelectedServices} />
       <Stack.Screen options={{ headerShown: false }} name="Map" component={Map} />
-
+      <Stack.Screen options={{ headerShown: false }} name="SelectTimeOne" component={SelectTimeOne} />
 
 
 

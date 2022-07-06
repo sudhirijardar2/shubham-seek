@@ -58,16 +58,16 @@ import Star from 'react-native-vector-icons/AntDesign';
   ]
  
    return (<>
-     <View style={{ marginTop:20 }}>
+     <View style={{ bottom:10 }}>
 
-     <View style={{top:30}}>
+     <View style={{top:25}}>
                                 <Image
                                     style={{ width: "100%",borderRadius:20 }}
                                     source={require('../../assets/fgone.png')}
                                 />
 
 <Text style={{fontSize:16,color:'#161616',fontWeight:'700',top:25}}>Diamond Facial</Text>
-                             <View style={{borderRadius:8,alignItems:'center',marginHorizontal:160,left:120,backgroundColor:'#FFFFFF'}}>
+                             <View style={{borderRadius:8,alignItems:'center',marginHorizontal:160,left:110,width:75,backgroundColor:'#FFFFFF'}}>
 <Plus name='plus' color={'#5E17EB'} style={{top:10,right:15}} />
 <Text style={{fontSize:14,color:'#5E17EB',fontWeight:'500',left:5,top:-5}}>Add</Text>
 </View>

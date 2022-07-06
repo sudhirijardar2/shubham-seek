@@ -48,7 +48,7 @@
  
  
    return (<>
-   <ScrollView>
+   {/* <ScrollView> */}
      <View >
        <Head title="Facial for glow" />
 
@@ -56,8 +56,9 @@
        <Facialglow />
 
     <View style={{marginHorizontal:20,right:20}}> 
- <TouchableOpacity onPress={()=>setPopup(true)}>
-       <View style={{ alignItems: 'center',  borderRadius: 12, borderWidth: 1, padding: 20, backgroundColor: '#D8D8D8', borderColor: '#D8D8D8', width: '100%',top:600,justifyContent:'center',marginHorizontal:20}}>
+ <TouchableOpacity onPress={()=>navigation.navigate("SelectedServices")}>
+ {/* onPress={()=>setPopup(true)} */}
+       <View style={{ alignItems: 'center',  borderRadius: 12, borderWidth: 1, padding: 20, backgroundColor: '#D8D8D8', borderColor: '#D8D8D8', width: '100%',top:622,justifyContent:'center',marginHorizontal:20}}>
      
                  <Text style={{ color: '#858585', fontSize: 14, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Proceed</Text>
              
@@ -71,7 +72,7 @@
              
      </View>
      <View style={{height:1000}}></View>
-     </ScrollView>
+     {/* </ScrollView> */}
 
    </>
    )

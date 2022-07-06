@@ -37,6 +37,7 @@ import axios from 'react-native-axios'
 // import { useEffect } from 'react/cjs/react.production.min';
 import HomeOneScroll from './HomeOneScroll';
 import Sumary from '../Sumrryslot/Sumary';
+import Map from './Map';
 
 
 
@@ -149,7 +150,7 @@ const Home = ({ navigation }) => {
     const des = "An OTP will be sent on given number for varification \n Standard message and data rates apply"
     return (<>
         <ScrollView>
-        <View style={{ marginHorizontal: 20 }}>
+        <View style={{ marginHorizontal: 20,bottom:22 }}>
 
             <View style={{ borderRadius: 15, width: '15%', alignItems: 'center', backgroundColor: '#F5C443', top: 50 }}>
 
@@ -191,7 +192,7 @@ const Home = ({ navigation }) => {
 
                 </View>
                 <View style={{ position: 'absolute', top: 30 }}>
-                    <TouchableOpacity onPress={() => navigation.navigate("Sumary")} >
+                    <TouchableOpacity>
                         <View style={{ borderRadius: 30, alignItems: 'center', padding: 5, marginHorizontal: 20, paddingHorizontal: 20, backgroundColor: 'white' }}>
                             <Text style={{ color: '#5E17EB', fontSize: 10, fontWeight: '700' }}>NEW USER</Text>
                         </View>
@@ -202,55 +203,67 @@ const Home = ({ navigation }) => {
                     <Text style={{ fontSize: 12, fontWeight: '400', color: '#FFFFFF', top: -20, left: 20 }}>For every cleaning services</Text>
 
 
-
+                    
 
                 </View>
             </LinearGradient>
             <View style={{ marginTop: 40 }}>
-                <TouchableOpacity onPress={() => navigation.navigate("SelectedServices")}>
+                <TouchableOpacity >
+                {/* onPress={() => navigation.navigate("SelectedServices")} */}
                     <Text style={{ fontSize: 20, fontWeight: '700', color: '#161616', bottom:25 }}>Categories</Text>
                 </TouchableOpacity>
                 <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                <TouchableOpacity onPress={()=>navigation.navigate(Map)}>
                <View style={{backgroundColor: '#ffffff', borderRadius: 20,width:102,height:135,}}>
-           
                 <Image source={require('../assets/swoman.png')} style={{borderRadius:20,left:14,top:10}} />
                    <Text style={{fontSize:14,top:18,left:19,color:'black'}}>Salon for</Text>
                    <Text style={{fontSize:14,top:16,left:24,color:'black'}}>Women</Text>
                </View>
+               </TouchableOpacity>
+               <TouchableOpacity>
                <View style={{backgroundColor: '#ffffff', borderRadius: 20,width:102,height:135,}}>
                <Image source={require('../assets/tailor.png')} style={{borderRadius:20,left:14,top:10}} />
                    <Text style={{fontSize:14, top:18,left:29,color:'black'}}>Tailor</Text>
                    
                </View>
+               </TouchableOpacity>
+               <TouchableOpacity>
                <View style={{backgroundColor: '#ffffff', borderRadius: 20,width:102,height:135,}}> 
                    <Image source={require('../assets/mman.png')} style={{borderRadius:20,left:14,top:10}} />
                    <Text style={{fontSize:14,top:18,left:14,color:'black'}}>Massage for</Text>
                    <Text style={{fontSize:14, left:35,top:16,color:'black'}}>Men</Text>
                 </View>
+                </TouchableOpacity>
                     </View>
-
+                
                     <View style={{flexDirection:'row',justifyContent:'space-between',top:25}}>
+                        <TouchableOpacity>
                <View style={{backgroundColor: '#ffffff', borderRadius: 20,width:102,height:135,}}>
            
                 <Image source={require('../assets/hsalon.png')} style={{borderRadius:20,left:14,top:10}} />
                    <Text style={{fontSize:14,top:18,left:22,color:'black'}}>Salon for</Text>
                    <Text style={{fontSize:14,top:16,left:35,color:'black'}}>men</Text>
                </View>
+               </TouchableOpacity>
+               <TouchableOpacity>
                <View style={{backgroundColor: '#ffffff', borderRadius: 20,width:102,height:135,}}>
                <Image source={require('../assets/hrepair.png')} style={{borderRadius:20,left:14,top:10}} />
                    <Text style={{fontSize:14,top:18,left:27,color:'black'}}> Home</Text>
                    <Text style={{fontSize:14,top:15,left:27,color:'black'}}>Repairs</Text>
                    
                </View>
+               </TouchableOpacity>
+               <TouchableOpacity>
                <View style={{backgroundColor: '#ffffff', borderRadius: 20,width:102,height:135,}}> 
                    <Image source={require('../assets/acrepair.png')} style={{borderRadius:20,right:5 ,left:14,top:10}} />
                    <Text style={{fontSize:14,top:18,left:18,color:'black'}}>AC Service</Text>
                    <Text style={{fontSize:14,top:15,left:20,color:'black'}}>& Repairs</Text>
                 </View>
-                    </View>
+                </TouchableOpacity>
+                </View>
             </View>
 
-<View style={{top:25,}}>
+<View style={{top:15}}>
     <HomeOneScroll />
 </View>
 

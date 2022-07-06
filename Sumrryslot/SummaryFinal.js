@@ -78,11 +78,7 @@ const SummaryFinal = ( { navigation }) => {
     <CardRelated />
     <Summarylist />
 
-    <TouchableOpacity onPress={()=>navigation.navigate("AddMoney")}>
-    <View style={{borderRadius:10,padding:15,backgroundColor:'rgba(94, 23, 235, 1)',top:240,marginHorizontal:10}}>
-        <Text style={{textAlign:'center',color:'white'}}>Pay ₹749</Text>
-    </View>
-    </TouchableOpacity>
+    
 <View style={{marginTop:260,padding:10,borderRadius:12,elevation:10,backgroundColor:'white'}}>
 <TouchableOpacity onPress={()=>navigation.navigate("AddMoney")}>
 
@@ -91,9 +87,9 @@ const SummaryFinal = ( { navigation }) => {
 
   <View style={{borderWidth:1,borderColor:'#161616',width:125}}></View>
   <Text style={{top:15,fontWeight:'400'}}>Item Total</Text>
-  <Text style={{left:300}}>₹699</Text>
+  <Text style={{left:305}}>₹699</Text>
   <Text style={{top:15,fontWeight:'400'}}>Item Discount</Text>
-  <Text style={{left:310,fontSize:14,color:'#52B46B'}}>₹50</Text>
+  <Text style={{left:300,fontSize:14,color:'#52B46B'}}>- ₹50</Text>
   <Text style={{top:10,fontWeight:'400'}}>Convinience Fee</Text>
   <Text style={{left:310,fontSize:14}}>₹50</Text>
   <Text style={{top:10,fontWeight:'700'}}>Grand Total</Text>
@@ -105,7 +101,11 @@ const SummaryFinal = ( { navigation }) => {
   <View style={{borderRadius:10,padding:20,left:10,width:'50%',backgroundColor:'#5E17EB'}}>
       <Text style={{textAlign:'center',color:'white'}}>Request Now</Text>
   </View> */}
-
+<TouchableOpacity onPress={()=>navigation.navigate("AddMoney")}>
+    <View style={{borderRadius:10,padding:15,backgroundColor:'rgba(94, 23, 235, 1)',width:'390%',right:2}}>
+        <Text style={{textAlign:'center',color:'white'}}>Pay ₹749</Text>
+    </View>
+    </TouchableOpacity>
   </View>
   <View style={{borderRadius:6,backgroundColor:'rgba(82, 180, 107, 0.2)',padding:5,marginTop:20}}>
       <Text style={{textAlign:'center',color:'#52B46B',fontSize:12}}>Hurray ! you have saved ₹50 on final bill</Text>

@@ -56,11 +56,11 @@ import Star from 'react-native-vector-icons/AntDesign';
      
     },
   ]
- 
+  // #d3d3d3
    return (<>
      <View style={{marginTop:20,marginHorizontal:5 }}>
 
-     <View style={{borderRadius:12,padding:15,backgroundColor:'rgba(242, 236, 253, 1)'}}>
+      <View style={{borderRadius:12,padding:15,backgroundColor:'#EBEBEB'}}>
   <Text style={{fontSize:16,color:'#161616'}}>Selected Services</Text>
   <View style={{borderWidth:1,borderColor:'#161616',width:125}}></View>
   <Image
