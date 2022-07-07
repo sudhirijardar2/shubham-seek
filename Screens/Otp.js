@@ -30,7 +30,36 @@ export default function App({ navigation }) {
   const [pin4, setPin4] = useState("");
 
 
+  const otpVerification = () => {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
 
+    var raw = JSON.stringify({
+      "code": parseInt(pin)
+    });
+    console.log('2222222', raw);
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+
+    fetch("http://3.109.48.115:5500/user/verification", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        if(result.success){
+          navigation.navigate("Home")
+        }
+      }
+      )
+      .catch(error =>{
+        navigation.navigate("Otp")
+      });
+
+
+  }
   
 
   return (<>
@@ -73,13 +102,14 @@ export default function App({ navigation }) {
             ref={pin1Ref}
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin1) => {
-              setPin1(pin1);
-              if (pin1 != "") {
-                pin2Ref.current.focus();
-              }
+            onChangeText={(text) => _onChangeText(text, setPin1, null, pin2Ref)}
+            // onChange={(pin1) => {
+            //   setPin1(pin1);
+            //   if (pin1 != "") {
+            //     pin2Ref.current.focus();
+            //   }
 
-            }}
+            // }}
             style={styles.TextInputText}
           />
 
@@ -90,12 +120,13 @@ export default function App({ navigation }) {
             ref={pin2Ref}
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin2) => {
-              setPin2(pin2);
-              if (pin2 != "") {
-                pin3Ref.current.focus();
-              }
-            }}
+            onChangeText={(text) => _onChangeText(text, setPin2, pin2Ref, pin3Ref)}
+            // onChange={(pin2) => {
+            //   setPin2(pin2);
+            //   if (pin2 != "") {
+            //     pin3Ref.current.focus();
+            //   }
+            // }}
             style={styles.TextInputText}
           />
 
@@ -107,12 +138,13 @@ export default function App({ navigation }) {
 
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin3) => {
-              setPin3(pin3);
-              if (pin3 != "") {
-                pin4Ref.current.focus();
-              }
-            }}
+            onChangeText={(text) => _onChangeText(text, setPin3, pin3Ref, pin4Ref)}
+            // onChange={(pin3) => {
+            //   setPin3(pin3);
+            //   if (pin3 != "") {
+            //     pin4Ref.current.focus();
+            //   }
+            // }}
             style={styles.TextInputText}
           />
 
@@ -123,9 +155,10 @@ export default function App({ navigation }) {
             ref={pin4Ref}
             keyboardType={'number-pad'}
             maxLength={1}
-            onChange={(pin4) => {
-              setPin4(pin4);
-            }}
+            onChangeText={(text) => _onChangeText(text, setPin4, null, null)}
+            // onChange={(pin4) => {
+            //   setPin4(pin4);
+            // }}
             style={styles.TextInputText}
           />
 
