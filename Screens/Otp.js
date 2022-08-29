@@ -49,19 +49,15 @@ export default function App({ navigation }) {
     fetch("http://3.109.48.115:5500/user/verification", requestOptions)
       .then(response => response.json())
       .then(result => {
-        if(result.success){
+        if (result.success) {
           navigation.navigate("Home")
         }
       }
       )
-      .catch(error =>{
+      .catch(error => {
         navigation.navigate("Otp")
       });
-
-
   }
-  
-
   return (<>
 
     {/* <View style={styles.container}>
@@ -70,32 +66,18 @@ export default function App({ navigation }) {
           numberOfInputs={6}
         />
       </View> */}
-
-
-
-
     <View style={{ marginHorizontal: 25 }}>
-
       {/* <Image
         style={styles.tinyLogo}
         source={require('./assets/man.jpg')}
       /> */}
     </View>
-
     <View>
-      <Text style={{ fontSize: 24, fontFamily: 'Poppins-Regular', fontWeight: '700', color: 'black',textAlign:'center',top:150 }}>Enter Verification code</Text>
-
-
+      <Text style={{ fontSize: 24, fontFamily: 'Poppins-Regular', fontWeight: '700', color: 'black', textAlign: 'center', top: 150 }}>Enter Verification code</Text>
       <View style={{ marginTop: 180 }}>
-        <Text style={{ fontSize: 12, fontFamily: 'Poppins-Regular',textAlign:'center',fontWeight:'400' }}>we have sent you a 4 digit Verification code on </Text>
-        <Text style={{ fontSize: 14, fontFamily: 'Poppins-Regular', marginTop: 5,textAlign:'center',fontWeight:'500' }}>+91 6390168836</Text>
-
-
+        <Text style={{ fontSize: 12, fontFamily: 'Poppins-Regular', textAlign: 'center', fontWeight: '400' }}>we have sent you a 4 digit Verification code on </Text>
+        <Text style={{ fontSize: 14, fontFamily: 'Poppins-Regular', marginTop: 5, textAlign: 'center', fontWeight: '500' }}>+91 6390168836</Text>
       </View>
-
-     
-
-
       <View style={styles.TopView}>
         <View style={styles.TextInputView}>
           <TextInput
@@ -112,9 +94,7 @@ export default function App({ navigation }) {
             // }}
             style={styles.TextInputText}
           />
-
         </View>
-
         <View style={styles.TextInputView}>
           <TextInput
             ref={pin2Ref}
@@ -129,13 +109,10 @@ export default function App({ navigation }) {
             // }}
             style={styles.TextInputText}
           />
-
         </View>
-
         <View style={styles.TextInputView}>
           <TextInput
             ref={pin3Ref}
-
             keyboardType={'number-pad'}
             maxLength={1}
             onChangeText={(text) => _onChangeText(text, setPin3, pin3Ref, pin4Ref)}
@@ -147,9 +124,7 @@ export default function App({ navigation }) {
             // }}
             style={styles.TextInputText}
           />
-
         </View>
-
         <View style={styles.TextInputView}>
           <TextInput
             ref={pin4Ref}
@@ -161,30 +136,8 @@ export default function App({ navigation }) {
             // }}
             style={styles.TextInputText}
           />
-
         </View>
-
       </View>
-
- 
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {/* <OTPInputView
     style={{width: '80%', height: 200}}
     pinCount={4}
@@ -198,31 +151,16 @@ export default function App({ navigation }) {
         console.log(`Code is ${code}, you are good to go!`)
     })}
 /> */}
-
-
-     
-
-
-  
-
     </View>
-    <TouchableOpacity onPress={()=>navigation.navigate("Home")}>
-<View style={{marginHorizontal:20,marginTop:60}}>
-    <View style={{ alignItems: 'center', marginTop: 80, borderRadius: 12,  padding: 15, backgroundColor: '#5E17EB', borderColor: '#1589FF', width: '100%' }}>
-        <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Continue</Text>
+    <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+      <View style={{ marginHorizontal: 20, marginTop: 60 }}>
+        <View style={{ alignItems: 'center', marginTop: 80, borderRadius: 12, padding: 15, backgroundColor: '#5E17EB', borderColor: '#1589FF', width: '100%' }}>
+          <Text style={{ color: 'white', fontSize: 18, fontFamily: 'Poppins-Regular', fontWeight: '500' }}>Continue</Text>
+        </View>
       </View>
-      </View>
-      </TouchableOpacity>
-
-
-    
-
-
+    </TouchableOpacity>
   </>);
-
-
 }
-
 const styles = StyleSheet.create({
   // borderStyleBase: {
   //   width: 30,
@@ -245,27 +183,24 @@ const styles = StyleSheet.create({
   // },
 
   TextInputView: {
-    borderRadius:7,
+    borderRadius: 7,
     width: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    height:50,
+    height: 50,
     //backgroundColor:'#F1F6F7'
-    backgroundColor:'white',
-    borderColor:'#5E17EB',
-    margin:10,
-    borderWidth:1
-
-
+    backgroundColor: 'white',
+    borderColor: '#5E17EB',
+    margin: 10,
+    borderWidth: 1
   },
   TextInputText: {
     fontSize: 18,
-    color:'#A9A9A9'
+    color: '#A9A9A9'
   },
-  TopView:{
-    flexDirection:'row',
-    marginTop:30,
-    justifyContent:'center'
+  TopView: {
+    flexDirection: 'row',
+    marginTop: 30,
+    justifyContent: 'center'
   }
-
 });

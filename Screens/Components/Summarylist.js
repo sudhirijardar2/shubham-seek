@@ -90,8 +90,6 @@ import Star from 'react-native-vector-icons/AntDesign';
              style={{ borderRadius: 12, borderWidth: 0.5,width:140,height:120 }}
              source={item.image}
            />
-
-
            <Text style={{ fontSize: 16,  color: '#161616', fontWeight: '500',top:10 }}>{item.title}</Text>
            <Text style={{ fontSize: 14,  color: '#5E17EB', fontWeight: '400',top:10 }}>{item.onemore}</Text>
            <TouchableOpacity>
@@ -102,27 +100,12 @@ import Star from 'react-native-vector-icons/AntDesign';
            </View>
            </TouchableOpacity>
          </View>
-
-         
-        
-
-
        </View>
-
-       
      )
-
    }}
-
-
-
  />
-
-
 </View>
-
    </>
    )
-  
  }
  export default Summarylist;

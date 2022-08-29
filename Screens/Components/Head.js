@@ -11,18 +11,18 @@ const Head = (props) => {
     // const [Ifont, setIfont] = globalfont;
 
     const Ifont = 'Poplin';
-    
+
     return (
         <View>
-             <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 16, marginBottom: 13 }}>
-                    <TouchableOpacity onPress={() => props.navigation.goBack()} style={{position:'absolute', top:8,  left:22,  }}>
-                        <View style={{borderRadius:8,padding:5,backgroundColor:'rgba(243, 243, 243, 1)'}}>
-                    <Icon name="left" size={20} color="#000000" />
+            <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 16, marginBottom: 13 }}>
+                <TouchableOpacity onPress={() => props.navigation.goBack()} style={{ position: 'absolute', top: 8, left: 22, }}>
+                    <View style={{ borderRadius: 8, padding: 5, backgroundColor: 'rgba(243, 243, 243, 1)' }}>
+                        <Icon name="left" size={20} color="#000000" />
                     </View>
-                    </TouchableOpacity>                        
-                    <Text style={[{fontFamily: `${ Ifont }`}, styles.head]}>{props.title}</Text>
-                </View>
-                {/* <View style={{borderWidth:0.5,borderColor:'#EBEBEB'}}>
+                </TouchableOpacity>
+                <Text style={[{ fontFamily: `${Ifont}` }, styles.head]}>{props.title}</Text>
+            </View>
+            {/* <View style={{borderWidth:0.5,borderColor:'#EBEBEB'}}>
 
                 </View> */}
         </View>
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     head: {
         color: 'black',
         fontStyle: 'normal',
-        
+
         // fontFamily:"RammettoOne-Regular",
         fontWeight: '700',
         fontSize: 20,
